@@ -1,0 +1,15 @@
+[project]
+name = "envto"
+version = "0.1.0"
+description = "env file manager - save/load/view .env files in sqlite3"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "typer>=0.25.1",
+]
+
+[project.scripts]
+envto = "envto.cli:main"
+
+[tool.uv]
+package = true
