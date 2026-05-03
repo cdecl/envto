@@ -54,7 +54,12 @@ uv pip install -e .
 which envto   # ~/.local/bin/envto (또는 venv 내부 bin 디렉터리)
 envto --help  # Typer 기반 헬프가 출력됩니다.
 ```
-> **fzf** 가 설치돼 있지 않다면 `brew install fzf` (macOS) 혹은 `sudo apt-get install fzf` (Ubuntu) 로 미리 설치해 주세요.
+> **fzf** 는 필수 의존성입니다. macOS에서는 `brew install fzf`, Ubuntu에서는 `sudo apt-get install fzf` 로 설치해 주세요.
+
+> **uv sync** 로 프로젝트 초기화도 가능합니다:
+> ```bash
+> uv sync   # pyproject.toml·uv.lock 기반 설치 (editable mode 포함)
+> ```
 
 ---
 
@@ -88,6 +93,13 @@ SECRET_KEY=super‑secret
 ```
 
 ---
+
+## 📦 의존성
+
+- **Python** >= 3.14
+- **uv** 패키지 매니저 (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
+- **fzf** 터미널 fuzzy finder (위 설치 지침 참고)
+- **typer** >= 0.25.1 (pyproject.toml에 명시)
 
 ## 📄 프로젝트 구조
 ```
